@@ -28,7 +28,7 @@ SOURCE_DIR = os.getcwd()
 DEST_DIR = os.path.join(SOURCE_DIR, "OrganizedMedia")
 CHUNK_SIZE = 8192  # For hashing large files
 VALID_EXTENSIONS = (".jpg", ".jpeg", ".png", ".heic", ".gif", ".mp4", ".mov", ".avi", ".mkv")
-HASH_ALGORITHM = "sha256"  # Change to "md5" for faster processing if desired
+HASH_ALGORITHM = "md5"  # can also be sha256 for few collision risk, but will slow it down
 
 def get_file_hash(filepath):
     """Calculate hash of a file using specified algorithm."""
